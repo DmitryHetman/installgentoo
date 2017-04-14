@@ -1,0 +1,21 @@
+Previous thread:
+Friendly threads:
+>FGLT
+
+List of advantages over other distros:
+1. Rolling release
+2. Source-based
+3. Multiple overlays (repos) 
+4. Wayland-ready (you don't need xorg at all in gentoo)
+5. Flexibility
+6. Performance
+7. Security
+8. Stability
+
+Install Gentoo GNU/Linux Guide:
+
+Link to repository for commits:
+
+Here you can get stable header and guide:
+
+Archive:

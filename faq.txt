@@ -1,0 +1,44 @@
+FAQ:
+> muh...
+Official FAQ: https://wiki.gentoo.org/wiki/FAQ
+> What advantages of Gentoo GNU/Linux?
+ - Flexibility and convinient package managment with Portage system.
+ - In Gentoo you never pay for what you don't use
+ - You can choose compiller gcc/clang/intel, standard C library musl/glibc/uclibc-ng, init system openrc/systemd you have no such choice in binary distros.
+> How long it takes to compile package?
+On Intel Core i3 4330 (2 cores 3.5GHz):
+ - Linux Kernel - 3min 23sec
+ - Chromium - 2h 52min
+ - Firefox - 32min
+ - Bash - 51sec
+ - Weston - 32sec
+> Is it true that Gentoo uses less ram?
+Yes, especially if you use musl/uclibc and packages compiled with "-Os" option, but they will be slower, for fast binaries use glibc and -O2.
+> How much faster Gentoo than other OS?
+It can be 2-4 times faster than Windows, sometimes 1.4-2.3 times faster than Arch, sometimes slower, always faster than debian (ancient software and 
+comiller)
+> Can I compile packages on other PC?
+Yes.
+> What if I complete newfag without GNU/Linux expirience?
+Read 'Linux Sea' book, lean to write dash scripts.
+> I have some problems with Perl
+perl-cleaner --reallyall
+> I have gentoo-related problem
+https://wiki.gentoo.org/wiki/Troubleshooting
+> How update system?
+Normal update:
+emerge -uDN @world
+Deep uptate:
+emerge -uDUN --changed-deps=y --with-bdeps=y @world
+-av options is recommended (ask and verbose).
+> How work and compile something big at the same time?
+Specify MAKEOPTS='-jN' where N is number of cores -1.
+> Can't compile package
+1. Add bug to gentoo bugtracker.
+2. Specify explicitly standard of the language in CFLAGS, -std=gnu++11 for example.
+3. Try another compiler (clang)
+4. Compile in one thread (MAKEOPTS='-j1'
+> I have a question
+Give maximum info, configs, logs.
+> Where else I can find help?
+Official IRC channel #gentoo (Freenode), #musl if you using gentoo musl.
