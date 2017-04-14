@@ -1,0 +1,20 @@
+Installation:
+This guide aimed for modern 64-bit systems without multilib (32-bit binaries and libraries).
+
+1. Choose Live CD
+Most convinient LiveCD for installing can be SystemRescueCD, it supports EFI, have 64-bit kernel, 
+XFCE, browser.
+https://www.system-rescue-cd.org/Download
+You can add EFI support to gentoo minimal CD:
+https://forums.gentoo.org/viewtopic-p-7581718.html
+https://wiki.gentoo.org/wiki/LiveUSB/Guide#Adjusting_the_bootloader_configuration
+http://www.rodsbooks.com/efi-bootloaders/elilo.html
+
+2. Disk partitioning
+If you have SSD you will heed 2 partitions on SSD:
+1. EFI System Partition 32MB [vfat/FAT32]
+2. Root [F2FS]
+And 1 on HHD:
+3. Home [EXT4]
+All your kernels will be in ESP normal monolitic  kernels about 5Mb big, this partition can't be smaller than 32mb.
+Root 60Gb more than enouth, so you can have dual-boot on 120Gb SSD.
